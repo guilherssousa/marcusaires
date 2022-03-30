@@ -30,9 +30,8 @@ export function App() {
     });
 
     for (let i = 0; i < projects.length; i++) {
-      const duration = random();
       gsap.from(`a.project[data-project="${i}"]`, {
-        duration,
+        duration: i * 0.15,
         y: 100,
         scale: 1.15,
         opacity: 0,
