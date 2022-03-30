@@ -1,7 +1,10 @@
 import { useRef, useEffect } from "preact/hooks";
 import { gsap, Power3 } from "gsap";
+import { CustomEase } from "gsap/CustomEase";
 
 import projects from "./data/projects.json";
+
+const ease = CustomEase.create("custom", "M0,0,C0.304,0.202,0.4,1,1,1");
 
 export function App() {
   const videosRef = useRef(null);
@@ -25,7 +28,7 @@ export function App() {
         y: 100,
         scale: 1.15,
         opacity: 0,
-        ease: Power3.easeOut,
+        ease,
       });
     }
   }, []);
