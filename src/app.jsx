@@ -1,20 +1,10 @@
 import { useRef, useEffect } from "preact/hooks";
 import { gsap, Power3 } from "gsap";
-import { CustomEase } from "gsap/CustomEase";
 
 import projects from "./data/projects.json";
 
-gsap.registerPlugin(CustomEase);
-
-const ease = CustomEase.create(
-  "custom",
-  "M0,0 C0,0 0.493,-0.028 0.748,0.226 0.75,0.228 0.752,0.23 0.754,0.232 0.82,0.386 0.834,0.423 0.87,0.522 0.956,0.762 1,1 1,1 "
-);
-
 export function App() {
   const videosRef = useRef(null);
-
-  const random = () => Math.floor(Math.random() * 10 + 10) * 0.1;
 
   useEffect(() => {
     gsap.from(".videos", {
@@ -35,7 +25,7 @@ export function App() {
         y: 100,
         scale: 1.15,
         opacity: 0,
-        ease: ease,
+        ease: Power3.easeOut,
       });
     }
   }, []);
