@@ -24,7 +24,7 @@ export function App() {
 
     for (let i = 0; i < projects.length; i++) {
       gsap.from(`a.project[data-project="${i}"]`, {
-        duration: i * 0.15,
+        duration: i * 0.1,
         y: 100,
         scale: 1.15,
         opacity: 0,
