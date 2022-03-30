@@ -26,7 +26,7 @@ export function App() {
       duration: 1,
       opacity: 0,
       y: 100,
-      ease: Power3.easeIn,
+      ease: Power3.easeOut,
     });
 
     for (let i = 0; i < projects.length; i++) {
