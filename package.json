@@ -1,0 +1,18 @@
+{
+  "name": "marcusaires",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.10.0",
+    "preact": "^10.5.13",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.0.0",
+    "vite": "^2.6.4"
+  }
+}
